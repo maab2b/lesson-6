@@ -11,23 +11,22 @@
 /* =========HEADER========== */
 
 header {
+    max-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #4D98A4;
 }
 
 .logo {
-    padding: 0.7em 0 0.7em 4.575em;
     font-family: 'Cherry Swash', cursive;
-    font-size: calc(13px + 2.1vw);
+    font-size: 40px;
     color: #FFFFFF;
     text-decoration: none;
 }
 
 .nav {
     width: 35%;
-    margin-right: 10%;
 }
 
 .nav__list {
@@ -40,8 +39,233 @@ header {
 }
 
 .nav__link {
-    font-size: calc(12px + 0.46vw); /*18*/
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
     color: #DCE3E4;
     text-decoration: none;
+    text-transform: uppercase;
 }
+
+/* ==============BANNER SECTION=============== */
+
+/* ..........Banner_PIC............. */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner__view {
+    width: 100%;
+    background: url(../images/first_screen_background.png) no-repeat center center;    
+}
+
+.banner h1 {
+    margin: 129px 0 46px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #E4E4E4;
+    text-transform: uppercase;
+}
+
+.banner button {
+    padding: 12px 45px;
+    background: transparent;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #E4E4E4;
+    border-bottom: solid;
+    border-color: #AFB1B4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__item--light {
+    width: 9px;
+    height: 9px;
+    margin: 121px 6px 30px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.carousel__item--dark {
+    width: 9px;
+    height: 9px;
+    margin: 121px 6px 30px;
+    background-color: #69728C;
+    border-radius: 50%;
+}
+
+/* ..............Banner_TEXT................. */
+
+.banner__text {
+    max-width: 80%;
+    padding: 5% 0;
+}
+
+.banner__text h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #4C505D;
+}
+
+.banner__text h2 span {
+    font-weight: 400;
+}
+
+.banner__text p {
+    margin: 0 auto;
+    padding: 1% 0 7%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.banner__text--icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* ==============TESTIMONIAL SECTION=============== */
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #00D089;
+}
+
+.testimonial__pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial__pic--img {
+    width: 135px;
+    height: 135px;
+    margin: 97px 38px 62px;
+    background: url(../images/testimonial_portrait.png) no-repeat center top;
+    border-radius: 50%;
+}
+
+.quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 97px 0 0 0;
+    text-align: left;
+}
+
+.quotes p {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #E4E4E4;
+}
+
+.quotes_img {
+    margin: 0;
+    padding: 0;
+}
+
+.quotes_img span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    color: #FFFFFF;
+    opacity: .2;
+}
+
+.testimonial__description {
+    max-width: 90%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+
+/* ==============CONTACT SECTION=============== */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: url(../images/map_background.png) no-repeat center center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    width: 430px;
+    height: 430px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    backface-visibility: hidden;
+}
+
+.contact__form {
+    position: absolute;
+    width: 17.25em;
+    display: flex;
+    flex-direction: column;
+  }
+
+.contact__input {
+    padding: 0.66em 0 0.62em 1.12em;
+    font-size: 14px;
+    color: #4C505D;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+.contact__input--email {
+    margin: 1.07em 0;
+    text-transform: lowercase;
+  }
+
+.form img {
+    position: absolute;
+    bottom: 15%;
+}
+
+.footer {
+    min-width: 100%;
+    background-color: #00D089;
+    text-align: center;
+}
+
+.footer h4 {
+    margin: 0;
+    padding: 10px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
