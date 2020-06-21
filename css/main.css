@@ -12,18 +12,36 @@
 
 header {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: #4D98A4;
 }
 
 .logo {
-    padding: 2.19% 0 2.19% 15%;
+    padding: 0.7em 0 0.7em 4.575em;
     font-family: 'Cherry Swash', cursive;
-    font-size: 40px;
+    font-size: calc(13px + 2.1vw);
     color: #FFFFFF;
-    text-align: left;
     text-decoration: none;
 }
 
+.nav {
+    width: 35%;
+    margin-right: 10%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    font-size: calc(12px + 0.46vw); /*18*/
+    text-align: center;
+    color: #DCE3E4;
+    text-decoration: none;
+}
