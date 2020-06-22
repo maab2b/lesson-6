@@ -6,16 +6,23 @@
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    overflow-x: hidden
 }
 
 /* =========HEADER========== */
 
 header {
-    width: 100%;
-    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    max-width: inherit;
     background-color: #4D98A4;
     z-index: +10;
 }
@@ -310,6 +317,7 @@ header {
 .form img {
     position: absolute;
     bottom: 10%;
+    cursor: pointer;
 }
 
 .footer {
