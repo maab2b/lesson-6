@@ -11,22 +11,28 @@
 /* =========HEADER========== */
 
 header {
-    max-width: 100%;
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #4D98A4;
+    z-index: +10;
 }
 
 .logo {
+    display: flex;
+    justify-content: flex-start;
     font-family: 'Cherry Swash', cursive;
-    font-size: 40px;
+    font-size: 2.5em;
     color: #FFFFFF;
     text-decoration: none;
 }
 
 .nav {
-    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
 }
 
 .nav__list {
@@ -39,13 +45,63 @@ header {
 }
 
 .nav__link {
+    position: relative;
+    margin-left: 4vw;
     font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 400;
-    text-align: center;
     color: #DCE3E4;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.nav__link--after::after {
+    content: "/";
+    position: absolute;
+    right: -2vw;
+}
+
+.header__nav--burger {
+    position: relative;
+    width: 3em;
+    height: 2.5em;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header__nav__burger--lines {
+    position: absolute;
+    top: 1em;
+    left: .4em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 2em;
+    height: .2em;
+    background: #69728C;
+}
+
+.header__nav__burger--lines::after {
+    content: "";
+    position: absolute;
+    top: -.5em;
+    right: 0em;
+    width: 2em;
+    height: .2em;
+    background: #69728C;
+}
+
+.header__nav__burger--lines::before {
+    content: "";
+    position: absolute;
+    top: +.5em;
+    right: 0em;
+    width: 2em;
+    height: .2em;
+    background: #69728C;
 }
 
 /* ==============BANNER SECTION=============== */
@@ -54,9 +110,10 @@ header {
 
 .banner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    width: 100%;
 }
 
 .banner__view {
@@ -65,19 +122,18 @@ header {
 }
 
 .banner h1 {
-    margin: 129px 0 46px 0;
+    margin: 4em 0 1.5em 0;
     font-family: 'Work Sans', sans-serif;
-    font-size: 44px;
-    font-weight: 700;
+    font-size: 2.75em;
     color: #E4E4E4;
     text-transform: uppercase;
 }
 
 .banner button {
-    padding: 12px 45px;
+    padding: 0.5em 1.5em;
     background: transparent;
     font-family: 'Work Sans', sans-serif;
-    font-size: 30px;
+    font-size: 1.8em;
     font-weight: 300;
     color: #E4E4E4;
     border-bottom: solid;
@@ -95,7 +151,7 @@ header {
 .carousel__item--light {
     width: 9px;
     height: 9px;
-    margin: 121px 6px 30px;
+    margin: 7.5625em 0.375em 1.875em;
     background-color: #FFFFFF;
     border-radius: 50%;
 }
@@ -103,7 +159,7 @@ header {
 .carousel__item--dark {
     width: 9px;
     height: 9px;
-    margin: 121px 6px 30px;
+    margin: 7.5625em 0.375em 1.875em;
     background-color: #69728C;
     border-radius: 50%;
 }
@@ -117,7 +173,7 @@ header {
 
 .banner__text h2 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 30px;
+    font-size: 1.875em;
     font-weight: 300;
     color: #4C505D;
 }
@@ -130,7 +186,7 @@ header {
     margin: 0 auto;
     padding: 1% 0 7%;
     font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 400;
 }
 
@@ -158,9 +214,9 @@ header {
 }
 
 .testimonial__pic--img {
-    width: 135px;
-    height: 135px;
-    margin: 97px 38px 62px;
+    width: 8.4375em;
+    height: 8.4375em;
+    margin: 6em 2.375em 3.875em;
     background: url(../images/testimonial_portrait.png) no-repeat center top;
     border-radius: 50%;
 }
@@ -170,14 +226,14 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 97px 0 0 0;
+    margin: 6em 0 0 0;
     text-align: left;
 }
 
 .quotes p {
     margin: 0;
     font-family: 'Work Sans', sans-serif;
-    font-size: 26px;
+    font-size: 1.625em;
     font-weight: 700;
     text-transform: uppercase;
     color: #E4E4E4;
@@ -190,7 +246,7 @@ header {
 
 .quotes_img span {
     font-family: 'Work Sans', sans-serif;
-    font-size: 150px;
+    font-size: 9.5em;
     font-weight: 700;
     color: #FFFFFF;
     opacity: .2;
@@ -199,7 +255,7 @@ header {
 .testimonial__description {
     max-width: 90%;
     font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 400;
     color: #FFFFFF;
 }
@@ -221,16 +277,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px;
-    width: 430px;
-    height: 430px;
+    position: relative;
+    margin: 2.5em;
+    width: 26.875em;
+    height: 26.875em;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     backface-visibility: hidden;
 }
 
 .contact__form {
-    position: absolute;
     width: 17.25em;
     display: flex;
     flex-direction: column;
@@ -238,10 +294,12 @@ header {
 
 .contact__input {
     padding: 0.66em 0 0.62em 1.12em;
-    font-size: 14px;
+    font-size: 0.875em;
     color: #4C505D;
     text-align: left;
     text-transform: capitalize;
+    resize: vertical;
+    z-index: +10;
   }
 
 .contact__input--email {
@@ -251,7 +309,7 @@ header {
 
 .form img {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
 }
 
 .footer {
@@ -262,10 +320,24 @@ header {
 
 .footer h4 {
     margin: 0;
-    padding: 10px 0;
+    padding: 0.625em 0;
     font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
     color: #FFFFFF;
     text-transform: uppercase;
 }
 
+
+/* ===============MEDIA REQUERIES============= */
+
+@media (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .header__nav--burger {
+        display: none;
+    }
+}
